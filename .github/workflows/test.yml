@@ -23,9 +23,8 @@ jobs:
       - name: Run Test Cases
         run: |
           # Test 1
-          - name: List all files in the repository
-          run: ls -R
-          - name: List files in test_data
-            run: ls test_data
+           cp test_data/test1_input.txt test_data/numbers.txt
+          python3 find_lowest_number.py test_data/numbers.txt output1.txt
+          diff output1.txt test_data/test1_expected.txt
          
 
