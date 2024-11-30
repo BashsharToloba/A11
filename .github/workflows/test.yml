@@ -22,8 +22,11 @@ jobs:
       # Step 3: Run test cases
       - name: Run Test Cases
         run: |
+                      - name: List directory structure
+                      run: |echo "Root directory " ls -R echo "test_data contents:"  ls -R test_data
+
           # Test 1
-           cp test_data/test1_input.txt test_data/numbers.txt
+          cp test_data/test1_input.txt test_data/numbers.txt
           python3 find_lowest_number.py test_data/numbers.txt output1.txt
           diff output1.txt test_data/test1_expected.txt
          
