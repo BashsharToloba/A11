@@ -23,6 +23,6 @@ jobs:
       - name: Run Test Cases
         run: |
           # Test 1
-          cp test_data/test1_input.txt test_data/numbers.txt
-          python3 find_lowest_number.py test_data/numbers.txt output1.txt
-          diff output1.txt test_data/test1_expected.txt
+          cp .github/test_data/.github/test1_input.txt .github/test_data/.github/numbers.txt
+          python3 find_lowest_number.py .github/test_data/numbers.txt .github/output1.txt
+          diff .github/output1.txt .github/test_data/test1_expected.txt
