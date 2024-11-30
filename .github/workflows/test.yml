@@ -23,6 +23,9 @@ jobs:
       - name: Run Test Cases
         run: |
           # Test 1
-          echo "Hello world"
+          cp test_data/test1_input.txt test_data/numbers.txt
+          python3 find_lowest_number.py test_data/numbers.txt output1.txt
+          diff output1.txt test_data/test1_expected.txt
+          
          
 
